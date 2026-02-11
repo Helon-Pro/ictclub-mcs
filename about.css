@@ -8,7 +8,7 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    color: #333;
+    color: aliceblue;
     background-color: #f8f9fa;
     padding: 20px;
 }
@@ -20,6 +20,60 @@ body {
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+.request{
+  color: darkblue;
+  background-color: turquoise; 
+  border: solid;
+  border-radius: 10px;
+  padding: 20px 20px 20px 10px;
+  font-size: 20px;
+}
+
+.projects{ 
+  color: teal;
+  font-size: 18px;
+}
+.organised{
+  font-size: 19px;
+}
+.due{
+  color: #00c853;
+  font-size: 18px;
+}
+.cabinet{
+  color: blue;
+  #e65100;
+  font-size: 18px
+}
+.members{
+  color: gold;
+  font-size: 18px;
+  background-color: darkmagenta;
+  border: red;
+  border-radius: 6.0px;
+  padding: 0 10px 0 20px
+}
+#home{
+  background-color: blue;
+  border: solid$2px;
+  border-color: ;
+  border-radius: 10px;
+  padding: 15px  20px 15.0px 20px;
+  font-size: 20px;
+  text-align: center;
+}
+.home{
+  color: white;
+}
+.updated{
+  background-color:  cyan;
+}
+.will{
+  border: solid$ 1px;
+  border-radius: 10px;
+  background-color:  chartreuse;
 }
 
 h1 {
