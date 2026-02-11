@@ -1,91 +1,111 @@
-/*body*/
-body{
- background-color: aliceblue;
-}
-/*About Us*/
-h1{
-  color: teal;
-}
-h2{
-  color: indigo;
-}
-h4{
-  color: red;
-  font-size: 20px;
-}
-h3{
-  color: orchid;
-}
-.our{
-  color: red;
-}
-.news {
-  color: magenta
+/* About Us Page - ICT CLUB MCS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.aim{
-  color: orangered
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+    padding: 20px;
 }
-.founded{
-  color: green;
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
 }
-.motto{
-  color: blue;
-  font-size: 17px
+
+h1 {
+    color: #2c3e50;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    font-size: 2.2rem;
 }
-.we{
-  color: blue;
-  font-size: 17px
+
+h2 {
+    color: #2980b9;
+    margin: 30px 0 15px;
+    font-size: 1.8rem;
 }
-.organised{
-  font-size: 19px;
+
+p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
 }
-.due{
-  color: #00c853;
-  font-size: 18px;
+
+strong {
+    color: #2c3e50;
 }
-.cabinet{
-  color: blue;
-  #e65100;
-  font-size: 18px
+
+/* Club Cabinet List */
+ol {
+    margin: 20px 0 20px 40px;
 }
-.members{
-  color: gold;
-  font-size: 18px;
-  background-color: darkmagenta;
-  border: red;
-  border-radius: 6.0px;
-  padding: 0 10px 0 20px
+
+li {
+    margin-bottom: 8px;
+    font-size: 1.1rem;
 }
-.projects{ 
-  color: teal;
-  font-size: 18px;
+
+/* Attention Box */
+.attention {
+    background-color: #fff3cd;
+    border-left: 5px solid #ffc107;
+    padding: 20px;
+    margin: 30px 0;
+    border-radius: 5px;
 }
-.request{
-  color: darkblue;
-  background-color: turquoise; 
-  border: solid;
-  border-radius: 10px;
-  padding: 20px 20px 20px 10px;
-  font-size: 20px;
+
+/* Club Constitution Section */
+.constitution {
+    background-color: #e8f4f8;
+    border-left: 5px solid #17a2b8;
+    padding: 20px;
+    margin: 30px 0;
+    border-radius: 5px;
 }
-#home{
-  background-color: blue;
-  border: solid$2px;
-  border-color: ;
-  border-radius: 10px;
-  padding: 15px  20px 15.0px 20px;
-  font-size: 20px;
-  text-align: center;
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    .container {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    p, li {
+        font-size: 1rem;
+    }
+    
+    ol {
+        margin-left: 25px;
+    }
 }
-.home{
-  color: white;
-}
-.updated{
-  background-color:  cyan;
-}
-.will{
-  border: solid$ 1px;
-  border-radius: 10px;
-  background-color:  chartreuse;
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    .container {
+        padding: 15px;
+    }
 }
