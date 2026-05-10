@@ -1,549 +1,697 @@
-<!DOCTYPE html>
 
-<html>
-<head>
-  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
-  <link rel="stylesheet" href="styles/style.css"/>
-
-</head>
-<body>
-  <h1>
-    
-  </h1>
-</body>
-</html>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ICT CLUB&#174;MCS</title>
-    <style>
-        /* Global Styles */
-        :root {
-            --primary:#00c853;
-            --secondary: #1e40af;
-            --accent: #3b82f6;
-            --light: #f8fafc;
-            --dark: #1e293b;
-            --text: #334155;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        body {
-            background-color: #f1fff9;
-            color: var(--text);
-            line-height: 1.6;
-        }
- 
- 
-  .clubcard{
-    color: yellow;
-    background-color: teal;
-    border-radius: 5px;
-  }
-  
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 15px;
-        }
-        
-        /* Header Styles */
-        header {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: white;
-            padding: 0.1rem 0;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-        }
-        
-        .logo i {
-            margin-right: 10px;
-            font-size: 2rem;
-        }
-        
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
-        
-        nav ul li {
-            margin-left: 1.5rem;
-        }
-        
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            padding: 0.5rem 0.8rem;
-            border-radius: 4px;
-        }
-        
-        nav ul li a:hover, nav ul li a.active {
-            background-color: rgba(255, 255, 255, 0.2);
-        }
-        
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(rgba(37, 99, 235, 0.8), rgba(30, 64, 175, 0.9)), url('https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding: 5rem 0;
-            text-align: center;
-        }
-        
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-        
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto 2rem;
-        }
-        
-        .btn {
-            display: inline-block;
-            background-color: white;
-            color: var(--primary);
-            padding: 0.8rem 1.5rem;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-        }
-        
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-        
-        .btn-primary {
-            background-color: var(--primary);
-            color: white;
-        }
-        
-        /* Main Content Styles */
-        main {
-            padding: 4rem 0;
-        }
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: 3rem;
-            color: var(--dark);
-        }
-        
-        .section-title h2 {
-            font-size: 2.2rem;
-            margin-bottom: 0.5rem;
-            position: relative;
-            display: inline-block;
-        }
-        
-        .section-title h2::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background-color: var(--primary);
-            border-radius: 2px;
-        }
-        
-        .card-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-        
-        .card {
-          color: ;
-            background-color: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-        
-        .card:hover {
-            transform: translateY(-10px);
-        }
-        
-        .card-img {
-            height: 200px;
-            background-color: var(--accent);
-            background-size: cover;
-            background-position: center;
-        }
-        
-        .card-content {
-            padding: 1.5rem;
-        }
-        
-        .card h3 {
-            margin-bottom: 0.8rem;
-            color: var(--dark);
-        }
-  
-  #News{
-    color: magenta;
-    background-color: magent;
-    padding: 5px 20px 5px 20px;
-    border: solid$2px;
-    border-radius: 23px;
-    font-size: 25px;
-     
-  }
-        
-        /* Footer Styles */
-        footer {
-            background-color: var(--dark);
-            color: white;
-            padding: 3rem 0 1.5rem;
-        }
-        
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-  
-        .footer-column h3 {
-            margin-bottom: 1.5rem;
-            font-size: 1.3rem;
-            position: relative;
-            padding-bottom: 0.5rem;
-        }
-        
-        .footer-column h3::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 50px;
-            height: 3px;
-            background-color: var(--primary);
-        }
-        
-        .footer-column ul {
-            list-style: none;
-        }
-        
-        .footer-column ul li {
-            margin-bottom: 0.8rem;
-        }
-        
-        .footer-column ul li a {
-            color: #cbd5e1;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        
-        .footer-column ul li a:hover {
-            color: white;
-        }
-        
-        .social-links {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-        
-        .social-links a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            color: white;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-        
-        .social-links a:hover {
-            background-color: var(--primary);
-            transform: translateY(-3px);
-        }
-        
-        .copyright {
-            text-align: center;
-            padding-top: 1.2rem;
-            border-top: 5px solid rgba(255, 255, 255, 0.1);
-            color: #00c853;
-            font-size: 0.9rem;
-        }
-        
-        /* Page-specific styles */
-        .page-content {
-            background-color: white;
-            border-radius: 10px;
-            padding: 2.5rem;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            margin-bottom: 2rem;
-        }
-        
-        .page-content h2 {
-            color: var(--dark);
-            margin-bottom: 1.5rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid var(--light);
-        }
-        
-        .page-content h3 {
-            color: var(--primary);
-            margin: 1.5rem 0 0.8rem;
-        }
-        h2{
-          color: blue;
-        }
-  h1{
-    color: orange;
-  }
-        .page-content p {
-            margin-bottom: 1rem;
-        }
-        
-        .page-content ul, .page-content ol {
-            margin-left: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
-        
-        .page-content li {
-            margin-bottom: 0.5rem;
-        }
-        
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            nav ul {
-                margin-top: 1rem;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            
-            nav ul li {
-                margin: 0.5rem;
-            }
-       .fas fa-clock{
-color: orange;
-       }         
-          
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-            .motto{
-              font-size: 15px;
-              color: white;
-              background-color: blue;
-            }
-            .hero p {
-                font-size: 1rem;
-            }
-          h4{
-           color: red; 
-          }
-        }
-  #clock{
-    color: yellow;
-  }
-  
-        
-        /* Utility Classes */
-        .text-center {
-            text-align: center;
-        }
-        
-        .mt-2 {
-            margin-top: 2rem;
-        }
-   
-        .mb-2 {
-            margin-bottom: 2rem;
-        }
-    </style>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+  <title>Mbogo College School | Kampala</title>
+  <!-- Font Awesome 6 for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: #f5f7fb;
+      color: #1e293b;
+      line-height: 1.5;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header - inspired by clean educational sites like Exodus College */
+    header {
+      background: #0b3d2e;
+      color: white;
+      padding: 15px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-icon {
+      font-size: 2.5rem;
+      color: #f9c74f;
+    }
+
+    .school-name h1 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      color: white;
+    }
+
+    .school-name p {
+      font-size: 0.9rem;
+      color: #d1e7dd;
+      font-weight: 500;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: color 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .nav-links a:hover {
+      color: #f9c74f;
+    }
+
+    .btn-login {
+      background: #f9c74f;
+      color: #0b3d2e !important;
+      padding: 10px 22px;
+      border-radius: 30px;
+      font-weight: 700;
+      transition: all 0.2s;
+      box-shadow: 0 4px 10px rgba(249,199,79,0.3);
+    }
+
+    .btn-login:hover {
+      background: #ffba08;
+      transform: translateY(-2px);
+    }
+
+    /* Hero Section - weekly updates highlight */
+    .hero {
+      background: linear-gradient(135deg, #0b3d2e 0%, #1b5e3f 100%);
+      color: white;
+      padding: 50px 0;
+      margin-bottom: 30px;
+      border-radius: 0 0 40px 40px;
+    }
+
+    .hero-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .hero-text h2 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      font-weight: 700;
+    }
+
+    .weekly-update {
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(10px);
+      padding: 20px;
+      border-radius: 24px;
+      margin-top: 20px;
+      border-left: 5px solid #f9c74f;
+    }
+
+    .weekly-update h3 {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 1.3rem;
+      color: #f9c74f;
+    }
+
+    .hero-image i {
+      font-size: 8rem;
+      color: rgba(249,199,79,0.9);
+      filter: drop-shadow(0 8px 12px rgba(0,0,0,0.2));
+    }
+
+    /* Main Dashboard style cards */
+    .section-title {
+      font-size: 1.8rem;
+      margin: 35px 0 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #0b3d2e;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-bottom: 30px;
+    }
+
+    .feature-card {
+      background: white;
+      border-radius: 28px;
+      padding: 25px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.04);
+      transition: transform 0.3s, box-shadow 0.3s;
+      border: 1px solid #edf2f7;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 30px rgba(0,0,0,0.08);
+    }
+
+    .feature-icon {
+      font-size: 2.5rem;
+      color: #0b3d2e;
+      margin-bottom: 15px;
+    }
+
+    /* Account panel (hidden by default) */
+    .dashboard-panel {
+      background: white;
+      border-radius: 32px;
+      padding: 25px;
+      margin: 25px 0;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+      display: none;
+      transition: all 0.3s;
+    }
+
+    .dashboard-panel.active {
+      display: block;
+    }
+
+    .tabs {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 25px;
+      flex-wrap: wrap;
+    }
+
+    .tab {
+      padding: 12px 25px;
+      background: #e9f0eb;
+      border: none;
+      border-radius: 30px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .tab.active {
+      background: #0b3d2e;
+      color: white;
+    }
+
+    .classwork-area, .progress-area {
+      display: none;
+    }
+
+    .classwork-area.active, .progress-area.active {
+      display: block;
+    }
+
+    .input-group {
+      margin-bottom: 20px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 14px 18px;
+      border: 1px solid #dde4e0;
+      border-radius: 20px;
+      font-size: 1rem;
+      background: #f9fbf9;
+      margin-top: 5px;
+    }
+
+    button {
+      background: #0b3d2e;
+      color: white;
+      border: none;
+      padding: 14px 28px;
+      border-radius: 30px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.2s;
+      font-size: 1rem;
+    }
+
+    button:hover {
+      background: #1e5e44;
+    }
+
+    .progress-list {
+      list-style: none;
+      margin-top: 15px;
+    }
+
+    .progress-list li {
+      padding: 12px 15px;
+      background: #f1f7f3;
+      border-radius: 16px;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    footer {
+      background: #0b3d2e;
+      color: #ddd;
+      padding: 30px 0;
+      margin-top: 50px;
+      text-align: center;
+      border-radius: 40px 40px 0 0;
+    }
+
+    @media (max-width: 768px) {
+      .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .hero-text h2 {
+        font-size: 2rem;
+      }
+      .hero-image i {
+        font-size: 5rem;
+      }
+    }
+  </style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container header-content">
-            <div class="logo">
-              <img src="https://i.ibb.co/jkWDVcwZ/lv-0-20251124162853.jpg" alt="lv-0-20251124162853" border="0" ixlib="rb-1.2.1&auto=formart&fit=crop&w=1350&q=80" width="110" height="90">
-                <span>ICTCLUB&#174;MCS<br><button class="motto"> "Empowering ICT Education" </button></span>
-            </div>
-            <nav>
-                <ul>
-
-                </ul>
-            </nav>
+  <header>
+    <div class="container header-content">
+      <div class="logo-area">
+        <i class="fas fa-school logo-icon"></i>
+        <div class="school-name">
+          <h1>Mbogo College</h1>
+          <p>Kampala, Uganda · Excellence & Discipline</p>
         </div>
-    </header>
+      </div>
+      <div class="nav-links">
+        <a href="#"><i class="fas fa-home"></i> Home</a>
+        <a href="#"><i class="fas fa-bullhorn"></i> Updates</a>
+        <a href="#" id="dashboardLink"><i class="fas fa-user-graduate"></i> Dashboard</a>
+        <a href="#" class="btn-login" id="loginBtn"><i class="fas fa-sign-in-alt"></i> Login / Register</a>
+      </div>
+    </div>
+  </header>
 
-    <!-- Hero Section -->
+  <main class="container">
+    <!-- Hero with Weekly Update -->
     <section class="hero">
-        <div class="container">
-            <h1>Welcome to ICT Club - Mbogo College School <br>#Official Website</h1>
-            <p>Empowering students with technology skills, innovation, and collaboration opportunities in the digital world.</p>
-            
-          <a href="about.html" class="btn btn-primary">How to Join ICT CLUB&#174;MCS</a>
-          <p> Join By Getting ICT CLUB&#174;MCS Membership Card at School. </p>
-          For more information about ICT CLUB&#174;MCS membership card, please talk to ICT CLUB&#174;MCS Cabinet or <a class="clubcard" href="about.html">Click here</a>
+      <div class="hero-content">
+        <div class="hero-text">
+          <h2>Nurturing Future Leaders</h2>
+          <p>Quality education rooted in values. Join Mbogo College School for O & A Level excellence.</p>
+          <div class="weekly-update">
+            <h3><i class="fas fa-calendar-week"></i> Weekly Update</h3>
+            <p><strong>12th - 18th May 2025:</strong> Mid-term exams begin Monday. Sports gala on Friday. All students to collect revised timetables from class teachers.</p>
+          </div>
         </div>
+        <div class="hero-image">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+      </div>
     </section>
 
-    <!-- Main Content -->
-    <main class="container">
-        <div class="section-title">
-            <h1>What We Do At <br>ICT CLUB&#174;MCS </h1>
-          <img src="https://i.ibb.co/jkWDVcwZ/lv-0-20251124162853.jpg" alt="lv-0-20251124162853" width="305" height="280">
-            <h2>Explore our activities and initiatives</h2>
-        </div>
+    <!-- Public Features (advertising) -->
+    <h2 class="section-title"><i class="fas fa-star"></i> Why Mbogo College?</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+        <h3>Expert Teachers</h3>
+        <p>Dedicated staff providing personalized attention and modern teaching methods.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-laptop"></i></div>
+        <h3>Digital Learning</h3>
+        <p>Online classwork, assignments and progress tracking for every student.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-futbol"></i></div>
+        <h3>Holistic Growth</h3>
+        <p>Sports, clubs, and character development alongside academic rigor.</p>
+      </div>
+    </div>
 
-        <div class="card-container">
-            <div class="card">
-                <div class="card-img" style=background-image: <a href="https://ibb.co/Z6GhGTFk"><img src="https://i.ibb.co/RpYCYHsV/chris-ried-ieic5-Tq8-YMk-unsplash-e1604181302768.jpg" alt="chris-ried-ieic5-Tq8-YMk-unsplash-e1604181302768" width="300" height="200"></a></div>
-                <div class="card-content">
-                    <h3>Coding Workshops</h3>
-                    <p>Learn programming languages and development skills through hands-on workshops and coding sessions.</p>
-                    <a href="about.html" class="btn btn-primary mt-2">View Events</a>
-                </div>
-            </div>
-            
-            <div class="card">
-                <div class="card-img" style=background-image: <a href="https://ibb.co/dJJ8ntTB"><img src="https://i.ibb.co/rffDn3jk/Screenshot-20250909-114024-2.jpg" alt="Screenshot-20250909-114024-2" width="300" height="200"></a></div>
-                <div class="card-content">
-                    <h3>Tech Projects</h3>
-                    <p>Collaborate on innovative technology projects that solve real-world problems and showcase your skills.</p>
-                    <a href="about.html" class="btn btn-primary mt-2">Our Projects</a>
-                </div>
-            </div>
-            
-            <div class="card">
-                <div class="card-img" style="background-image: https://ibb.co/jPqvQQF0"><img src="https://i.ibb.co/Zpv6FFC4/Screenshot-20250909-113947-2.jpg" alt="Screenshot-20250909-113947-2" width="300" height="200"></a></div>
-                <div class="card-content">
-                    <h3>Community Events</h3>
-                    <p>Participate in tech talks, hackathons, and networking events with industry professionals and peers.</p>
-                    <a href="about.html" class="btn btn-primary mt-2">Upcoming Events</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="section-title">
-            <h2>Latest Updates</h2>
-            <p>Stay informed about our recent activities, Updates and Events</p>
-          <p id="News">For News and Events<a id="News"href="about.html">Click here</a></p>
-          
+    <!-- Dashboard Section (hidden until login) -->
+    <div id="dashboardPanel" class="dashboard-panel">
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+        <h2 style="color: #0b3d2e;"><i class="fas fa-tachometer-alt"></i> School Dashboard</h2>
+        <button id="logoutBtn" style="background: #b91c1c;"><i class="fas fa-sign-out-alt"></i> Logout</button>
+      </div>
       
-        </div>
+      <!-- User info & role -->
+      <p style="margin: 10px 0; font-weight: 500;">👤 <span id="displayName"></span> | Role: <span id="displayRole" style="text-transform: capitalize;"></span></p>
+      
+      <div class="tabs">
+        <button class="tab active" id="tabClasswork"><i class="fas fa-book"></i> Classwork</button>
+        <button class="tab" id="tabProgress"><i class="fas fa-chart-line"></i> Learning Progress</button>
+      </div>
 
-        <div class="page-content">
-            <h2>Future Club Activities</h2>
-            <p>Our ICT Club has been actively engaged in various technology-related initiatives </p>
-            
-            <h3>Web Development Workshops</h3>
-            <p>With time, we shall conduct comprehensive web development workshops where students will learn HTML, CSS, and JavaScript fundamentals.  Participants will be able to buil their own websites during this hands-on session.</p>
-            
-            <h3>Microsoft Office Suite</h3>
-            <p>Our members will acquire knowledge that will enable them work in offices and comouter libraries through our 'Well Prepared Microsoft Office Suite Package' during our Weekly Learning Sessions.</p>
-            
-            <h3>Guest Speaker Series</h3>
-            <p>We shall host industry professionals who  will share insights about careers in cybersecurity, data science, and software engineering. These sessions will provide valuable networking opportunities for our members.</p>
+      <!-- Classwork Section -->
+      <div id="classworkSection" class="classwork-area active">
+        <h3>📚 Assignments & Classwork</h3>
+        <div id="teacherClassworkPanel" style="display: none;">
+          <div class="input-group">
+            <label>Assignment Title</label>
+            <input type="text" id="assignmentTitle" placeholder="e.g., Mathematics Exercise 4">
+          </div>
+          <div class="input-group">
+            <label>Description</label>
+            <textarea id="assignmentDesc" rows="3" placeholder="Details for students..."></textarea>
+          </div>
+          <button id="postAssignmentBtn"><i class="fas fa-paper-plane"></i> Post Assignment</button>
+        </div>
+        <div id="studentClassworkView">
+          <ul class="progress-list" id="assignmentList">
+            <li>No assignments yet.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Progress Section -->
+      <div id="progressSection" class="progress-area">
+        <h3>📈 Student Progress</h3>
+        <div id="teacherProgressPanel" style="display: none;">
+          <div class="input-group">
+            <label>Student Name</label>
+            <input type="text" id="progressStudent" placeholder="Student name">
+          </div>
+          <div class="input-group">
+            <label>Subject</label>
+            <input type="text" id="progressSubject" placeholder="e.g., Biology">
+          </div>
+          <div class="input-group">
+            <label>Score / Comment</label>
+            <input type="text" id="progressScore" placeholder="e.g., 85% - Good improvement">
+          </div>
+          <button id="addProgressBtn"><i class="fas fa-plus-circle"></i> Update Progress</button>
+        </div>
+        <div>
+          <ul class="progress-list" id="progressList">
+            <li>No progress records yet.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Login/Register Modal (simple inline) -->
+    <div id="authModal" style="display: none; background: white; border-radius: 28px; padding: 30px; max-width: 450px; margin: 30px auto; box-shadow: 0 20px 35px rgba(0,0,0,0.2);">
+      <h2 style="margin-bottom: 20px;"><i class="fas fa-user-lock"></i> Account Access</h2>
+      <div class="tabs" style="margin-bottom: 20px;">
+        <button class="tab active" id="loginTab">Login</button>
+        <button class="tab" id="registerTab">Register</button>
+      </div>
+      <div id="loginForm">
+        <div class="input-group">
+          <label>Email</label>
+          <input type="email" id="loginEmail" placeholder="teacher@mbogo.sc.ug">
+        </div>
+        <div class="input-group">
+          <label>Password</label>
+          <input type="password" id="loginPassword" placeholder="········">
+        </div>
+        <button id="submitLogin" style="width:100%;">Login</button>
+      </div>
+      <div id="registerForm" style="display: none;">
+        <div class="input-group">
+          <label>Full Name</label>
+          <input type="text" id="regName" placeholder="John Mukisa">
+        </div>
+        <div class="input-group">
+          <label>Email</label>
+          <input type="email" id="regEmail" placeholder="student@mbogo.sc.ug">
+        </div>
+        <div class="input-group">
+          <label>Role</label>
+          <select id="regRole">
+            <option value="student">Student</option>
+            <option value="teacher">Teacher</option>
+          </select>
+        </div>
+        <div class="input-group">
+          <label>Password</label>
+          <input type="password" id="regPassword" placeholder="Create password">
+        </div>
+        <button id="submitRegister" style="width:100%;">Register</button>
+      </div>
+      <button id="closeAuth" style="background: #ccc; margin-top: 15px; width:100%;">Cancel</button>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p><i class="far fa-copyright"></i> 2025 Mbogo College School, Kampala. Inspired by excellence. Weekly updates every Monday.</p>
+      <p style="margin-top: 8px;">📞 +256 700 123456 | 📧 info@mbogocollege.sc.ug</p>
+    </div>
+  </footer>
+
+  <script>
+    (function() {
+      // ----- State -----
+      let currentUser = null; // { name, email, role }
+      let users = JSON.parse(localStorage.getItem('mbogoUsers') || '[]');
+      let assignments = JSON.parse(localStorage.getItem('mbogoAssignments') || '[]');
+      let progressRecords = JSON.parse(localStorage.getItem('mbogoProgress') || '[]');
+
+      // DOM elements
+      const dashboardPanel = document.getElementById('dashboardPanel');
+      const authModal = document.getElementById('authModal');
+      const loginBtn = document.getElementById('loginBtn');
+      const dashboardLink = document.getElementById('dashboardLink');
+      const closeAuth = document.getElementById('closeAuth');
+      const displayName = document.getElementById('displayName');
+      const displayRole = document.getElementById('displayRole');
+      const logoutBtn = document.getElementById('logoutBtn');
+      
+      // Tabs
+      const tabClasswork = document.getElementById('tabClasswork');
+      const tabProgress = document.getElementById('tabProgress');
+      const classworkSection = document.getElementById('classworkSection');
+      const progressSection = document.getElementById('progressSection');
+      
+      // Teacher panels
+      const teacherClassworkPanel = document.getElementById('teacherClassworkPanel');
+      const teacherProgressPanel = document.getElementById('teacherProgressPanel');
+      
+      // Auth tabs
+      const loginTab = document.getElementById('loginTab');
+      const registerTab = document.getElementById('registerTab');
+      const loginForm = document.getElementById('loginForm');
+      const registerForm = document.getElementById('registerForm');
+
+      // ---- Helper Functions ----
+      function saveData() {
+        localStorage.setItem('mbogoUsers', JSON.stringify(users));
+        localStorage.setItem('mbogoAssignments', JSON.stringify(assignments));
+        localStorage.setItem('mbogoProgress', JSON.stringify(progressRecords));
+      }
+
+      function renderUI() {
+        if (currentUser) {
+          dashboardPanel.classList.add('active');
+          authModal.style.display = 'none';
+          displayName.textContent = currentUser.name;
+          displayRole.textContent = currentUser.role;
           
-            
-            <div class="text-center mt-2">
-                <a href="about.html" class="btn btn-primary">View All Activities</a>
-            </div>
-        </div>
-    </main>
+          // Show/hide teacher panels
+          if (currentUser.role === 'teacher') {
+            teacherClassworkPanel.style.display = 'block';
+            teacherProgressPanel.style.display = 'block';
+          } else {
+            teacherClassworkPanel.style.display = 'none';
+            teacherProgressPanel.style.display = 'none';
+          }
+          
+          renderAssignments();
+          renderProgress();
+        } else {
+          dashboardPanel.classList.remove('active');
+          displayName.textContent = '';
+          displayRole.textContent = '';
+        }
+      }
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h3>ICT CLUB&#174;MCS</h3>
-                    <p>Empowering ICT Education with technology skills and innovation opportunities to enable our members excel in the digital world.</p>
-                  <h4><b>ATTENTION!!</b><i> <br>Unless otherwise indicated, All Information about ICT CLUB&#174;MCS is only posted to this website. <br> If there are changes made, it will be indicated. Thanks.            </i></h4>
-                  
-                    </div>
-                </div>
-                
-                <div class="footer-column">
-                    <h3>Quick Links</h3>
-                    <ul>
-                      <nav>        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="about.html">Events</a></li>
-                        <li><a href="about.html">Projects</a></li>
-                        <li><a href="about.html">News</a></li>
-                      </nav>
-                    </ul>
-                </div>
-                
-                <div class="footer-column">
-                    <h3>Contact Info</h3>
-                    <ul>
-                        <li><i class="fas fa-map-marker-alt"></i> Mbogo College School, Kawempe
-                         
-                           <li>
-  <i class="fas fa-envelope"></i>  <!-- Added closing </i> -->
-  <a href="mailto:ictclubmcs@gmail.com">ictclubmcs@gmail.com</a>
-</li>
-<li>
-  <i class="fas fa-phone"></i>  <!-- Added closing </i> -->
-  <a href="tel: +256-749-777817">+256749777817</a>  
+      function renderAssignments() {
+        const list = document.getElementById('assignmentList');
+        if (!assignments.length) {
+          list.innerHTML = '<li>📭 No assignments posted yet.</li>';
+          return;
+        }
+        list.innerHTML = assignments.map(a => 
+          `<li><span><strong>${a.title}</strong> - ${a.desc}</span><span style="color:#555;">${a.date}</span></li>`
+        ).join('');
+      }
 
-                        <li><i class="fas fa-clock"></i><b                          id="clock"> Weekly Meetings: Every Tuesday 5:10PM - 6:30 PM </b><br>
-                          <b><i> If changes are made in a certain week, it will be indicated.</i></b>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-  
-            
-            <div class="copyright">
-                <p><img src="https://i.ibb.co/jkWDVcwZ/lv-0-20251124162853.jpg" alt="lv-0-20251124162853" width="80" height="60"> &copy; 2026 ICT CLUB&#174;MCS. All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
+      function renderProgress() {
+        const list = document.getElementById('progressList');
+        const filtered = currentUser?.role === 'student' 
+          ? progressRecords.filter(p => p.student === currentUser.name)
+          : progressRecords;
+        
+        if (!filtered.length) {
+          list.innerHTML = '<li>📊 No progress records available.</li>';
+          return;
+        }
+        list.innerHTML = filtered.map(p => 
+          `<li><span>${p.student} - ${p.subject}</span><span>${p.score}</span></li>`
+        ).join('');
+      }
+
+      // ---- Auth Logic ----
+      function login(email, password) {
+        const user = users.find(u => u.email === email && u.password === password);
+        if (user) {
+          currentUser = { name: user.name, email: user.email, role: user.role };
+          renderUI();
+          alert(`Welcome back, ${user.name}!`);
+        } else {
+          alert('Invalid credentials. Please try again or register.');
+        }
+      }
+
+      function register(name, email, role, password) {
+        if (users.find(u => u.email === email)) {
+          alert('Email already registered.');
+          return;
+        }
+        users.push({ name, email, role, password });
+        saveData();
+        alert('Registration successful! You can now login.');
+        // switch to login tab
+        loginTab.click();
+      }
+
+      function logout() {
+        currentUser = null;
+        renderUI();
+        authModal.style.display = 'none';
+      }
+
+      // ---- Event Listeners ----
+      loginBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        authModal.style.display = 'block';
+      });
+
+      dashboardLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        if (!currentUser) {
+          authModal.style.display = 'block';
+        } else {
+          dashboardPanel.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+
+      closeAuth.addEventListener('click', () => {
+        authModal.style.display = 'none';
+      });
+
+      document.getElementById('submitLogin').addEventListener('click', () => {
+        const email = document.getElementById('loginEmail').value.trim();
+        const password = document.getElementById('loginPassword').value;
+        if (email && password) login(email, password);
+        else alert('Please fill all fields.');
+      });
+
+      document.getElementById('submitRegister').addEventListener('click', () => {
+        const name = document.getElementById('regName').value.trim();
+        const email = document.getElementById('regEmail').value.trim();
+        const role = document.getElementById('regRole').value;
+        const password = document.getElementById('regPassword').value;
+        if (name && email && password) register(name, email, role, password);
+        else alert('All fields are required.');
+      });
+
+      loginTab.addEventListener('click', () => {
+        loginTab.classList.add('active');
+        registerTab.classList.remove(('active');
+        progressSection.classList.add('active');
+        classworkSection.classList.remove('active');
+      });
+
+      // Post Assignment (Teacher)
+      document.getElementById('postAssignmentBtn').addEventListener('click', () => {
+        if (!currentUser || currentUser.role !== 'teacher') {
+          alert('Only teachers can post assignments.');
+          return;
+        }
+        const title = document.getElementById('assignmentTitle').value.trim();
+        const desc = document.getElementById('assignmentDesc').value.trim();
+        if (!title) return alert('Title required.');
+        assignments.push({ title, desc, date: new Date().toLocaleDateString() });
+        saveData();
+        renderAssignments();
+        document.getElementById('assignmentTitle').value = '';
+        document.getElementById('assignmentDesc').value = '';
+      });
+
+      // Add Progress (Teacher)
+      document.getElementById('addProgressBtn').addEventListener('click', () => {
+        if (!currentUser || currentUser.role !== 'teacher') {
+          alert('Only teachers can update progress.');
+          return;
+        }
+        const student = document.getElementById('progressStudent').value.trim();
+        const subject = document.getElementById('progressSubject').value.trim();
+        const score = document.getElementById('progressScore').value.trim();
+        if (!student || !subject || !score) return alert('All fields required.');
+        progressRecords.push({ student, subject, score });
+        saveData();
+        renderProgress();
+        document.getElementById('progressStudent').value = '';
+        document.getElementById('progressSubject').value = '';
+        document.getElementById('progressScore').value = '';
+      });
+
+      // Initial render
+      renderUI();
+      // Preload some demo data if empty (for demonstration)
+      if (!users.length) {
+        users.push({ name: 'Teacher Isaac', email: 'teacher@mbogo.sc.ug', role: 'teacher', password: 'teach123' });
+        users.push({ name: 'Maria Nakato', email: 'maria@mbogo.sc.ug', role: 'student', password: 'student123' });
+        saveData();      }
+      if (!assignments.length) {
+        assignments.push({ title: 'Math Homework', desc: 'Complete exercise 5B, pages 32-33', date: '2025-05-10' });
+        assignments.push({ title: 'English Essay', desc: 'Write about "My role model" - 300 words', date: '2025-05-12' });
+        saveData();
+      }
+      if (!progressRecords.length) {
+        progressRecords.push({ student: 'Maria Nakato', subject: 'Mathematics', score: '78% - Good' });
+        progressRecords.push({ student: 'Maria Nakato', subject: 'English', score: '85% - Excellent' });
+        saveData();
+      }
+      renderAssignments();
+      renderProgress();
+    })();
+  </script>
 </body>
 </html>
+```
